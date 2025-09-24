@@ -1,0 +1,2 @@
+# bmstu
+some bmstu courses
