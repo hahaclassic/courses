@@ -1,0 +1,5 @@
+(print (cons 'hello (cons 'world nil)))
+(print (cons 'hello 'world))
+(print (list 'hello 'world))
+(print 'hello_world)
+(terpri)

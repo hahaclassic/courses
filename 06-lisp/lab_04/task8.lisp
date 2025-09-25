@@ -1,0 +1,32 @@
+(defun capital_of (country tbl)
+    (cond 
+        ((null tbl) Nil)
+        ((eq country (caar tbl)) (cdar tbl))
+        ((eq country (caadr tbl)) (cdadr tbl))
+        ((eq country (caaddr tbl)) (cdaddr tbl))
+        ((eq country (car (cadddr tbl))) (cdr (cadddr tbl)))
+        (t Nil))
+)
+
+(defun country_where (capital tbl)
+    (cond 
+        ((null tbl) Nil)
+        ((eq capital (cdar tbl)) (caar tbl))
+        ((eq capital (cdadr tbl)) (caadr tbl))
+        ((eq capital (cdaddr tbl)) (caaddr tbl))
+        ((eq capital (cdr (cadddr tbl))) (car (cadddr tbl)))
+        (t Nil)))
+
+(let ((table '((Russia . Moscow)
+      (USA . Washington)
+      (Canada . Ottawa)
+      (France . Paris))))
+    (print (capital_of 'Russia table))
+    (print (capital_of 'USA table))
+    (print (capital_of 'Canada table))
+    (print (capital_of 'France table))
+    (print (country_where 'Moscow table))
+    (print (country_where 'Washington table))
+    (print (country_where 'Ottawa table))
+    (print (country_where 'Paris table)))
+
