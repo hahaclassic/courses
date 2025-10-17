@@ -1,4 +1,4 @@
-# bmstu
+# courses
 
 I'm tired of the large number of useless repositories, so I combined them into one. 
 
